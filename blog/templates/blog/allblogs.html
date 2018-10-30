@@ -1,1 +1,24 @@
-Testing...Testing
+{% extends 'base.html' %}
+
+{% block content %}
+    <main role="main">
+        <div class="container">
+        <h1 class="text-center pt-3">Welcome to Nick's Blog!</h1>
+        <br>
+        <br>
+        <h2>Latest Posts</h2>
+        <hr>
+            {% for blah in blogs.all %}
+            <h5><a href="#">{{ blah.title }}</a></h5>
+            {{ blah.pub_date }}
+            <br>
+            <img class="img-fluid" src="{{ blah.image.url }}" height=180 width=320>
+            <br>
+            {{ blah.summary }}
+            <br>
+            <br>
+            {% endfor %}
+        </div>
+
+    </main>
+{% endblock %}

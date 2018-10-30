@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <main role="main">
+        <div class="container">
+            <h1 class="text-center pt-3">{{ blog.title }}</h1>
+            <br>
+            <br>
+            <div class="text-center">
+                <img class="img-fluid" src="{{ blog.image.url }}" height=540 width=960>
+            </div>
+            <br>
+            <br>
+            <p>{{ blog.body }}</p>
+        </div>
+
+    </main>
+<br>
+<br>
+<br>
+{% endblock %}
+
